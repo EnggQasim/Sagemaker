@@ -26,4 +26,7 @@ Senior Data Scientist at Mash & AWS ML Hero
 ## About Authour (Julien Simon)
 1) He learned first programming language 40 years ago. BASIC programming book for the Commodore VIC-20.
 2) I'd also like to thank the AWS service teams who work on Amazon SageMaker every day,You are the unspoken heroes of this book, and I'm but your messenger
-3) 
+3) Principal AI and Machine learning develoer advocate.
+4) Frequently speak at conferences and blogs on AWS blogs and on Medium
+5) He served 10 years as CTO/VP in top-tier web start-ups he lead software and ops teams
+6) he fought his way through a wide range of technical, business, and procurement issues, which helped him gain a deep understanding of physical infrastructure, its limitations, and how cloud computing can help.
