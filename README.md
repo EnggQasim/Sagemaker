@@ -13,9 +13,15 @@ A guide to building, training, and deploying machine learning models for develop
 
 ## Foreword
 1)  This domain evolves: algorithms, infrastructure, frameworks, best practices, experiment with a technique,shipping actual models to actual
-customers in production. Add debugging, scaling and monitoring to the list
+customers in production. Add debugging, scaling and monitoring to the list.
+2) Up-to-date and having the right set of tools, handling speed efficiently
+3) Streamline yourexperimentation's pipelines, shorten the time from development to production, scale projects removing all the hassle of infrastructure maintenance, setup and updates
+4) AWS storage solutions, Jupyter notebook, automated labelling, automated model debugging, hyper-parameter tuning and experiment handling
+  *. Deployment stage
+    *. Off-the-shelf Docker images, A/B testing, canary deployments capabilities, features' distribution shifts tracking
 
-
+Francesco Pochetti,
+Senior Data Scientist at Mash & AWS ML Hero
 
 ## About Authour (Julien Simon)
 1) He learned first programming language 40 years ago. BASIC programming book for the Commodore VIC-20.
