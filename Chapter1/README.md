@@ -83,11 +83,66 @@ client to access them (https://git-scm.com/). ~~
 Amazon SageMaker is driven by APIs that are implemented in the language SDKs supported by AWS (https://aws.amazon.com/tools/).
    * Python SDK
    * aka the 'SageMaker SDK'
-#### The AWS language SDKs   
+#### The AWS language SDKs
+   * Language SDK's implement service-specific API for all AWS S3, EC2 and so on.
+   * [SageMaker API](https://docs.aws.amazon.com/sagemaker/latest/dg/api-and-sdk-reference.html)
+   * [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/sagemaker.html). SageMaker APIs Available in boto3. 
+        * This API low level and verbose
+        * create_training_job() has a lot of JSON parameters.
+        * We don't need to manage Infrastructure as a code with **CloudFormation** this tool use your deveOps team.
+        * We use SageMaker SDK instead of **CloudFormation**
+   * SageMaker SDK
+        * SageMaker SDK is a python SDK specific. [click of details](https://github.com/aws/sagemaker-pythonsdk)
+        * [documentation](https://sagemaker.readthedocs.io/en/stable/)
+        * <span style="color:red">The code examples in this book are based on the first release of the SageMaker SDK v2</span>
+        * Extremely easy and comfortable to fire up a training job (One line of code) and to deploye a model (one line of code). Infrastructure concerns are abstracted away.
+        ```
+        # Configure the training job
+        my_estimator = TensorFlow(
+            'my_script.py',
+            role=my_sageMaker_role,
+            instance_type='ml.p3.2xlarge',
+            instance_count=1,
+            framework_version='2.1.0')
+        # Train the model
+        my_estimator.fit('s3://my_bucket/my_training_data/')
+
+        # Deploy the model to an HTTPS endpoint
+        my_predictor = my_estimator.deploy(
+            initial_instance_count=1,
+            instance_type='ml.c5.2xlarge')
+        ```
 
 
-
-    
-
+---
+# Demonstrating the strengths of Amazon SageMaker
+## Alice's and Bob's Problems
+   * Solving Alice's problems
+      * she is PHD and data Scientist, She is expert in Math and Statistics
+      * She focus on data, advancing her research and publishing papers.
+      * She don't know much about IT infrastructure, and she honestly doesn't care all for these topics.
+      * She work on her desktop workstation
+         * She manage her Desktop
+         * Install all packages and software
+         * When something goes wrong, she wastes precious hours fixing it.
+      * She also have remote servers with powerful multi-GPU, connected to petabyte of network-attached storage.
+         * Teh team leads meet and try to prioritize projects and workload.
+      * ## Let's see how SageMaker and cloud computing can help Alice.
+         * Inexpensive SageMaker notebook instance in a minute.
+         * Run code own demand on CPU, GPU's and cluster with managing infrastructure.
+         * Automatic model tuning feature in SageMaker
+         * Deploying models with cople on lines
+         * Keeping track of her expenses with AWS console.
+## Solving Bob's problems
+   * Bob's history
+      * He is DevOps engineer,
+      * In charge of a large training cluster share by a team of data scientists
+         * Setup Auto scaling
+         * Capacity planning is still needed to find the right amout of EC2 instances and to optimize the cost using the right mix of reserved.
+         * Bob tries to autmatically reduce capacity at night and on weekends when cluster is less busy.
+         * Applied **CI/CD**, After validating model
+            * dockerize/containers
+            * He just hopes that no one will ask him to do PyTorch and Apache MXNet too.
+      * ## Let's see how Bob could use SageMaker to improve his ML workflows.            
 
 
