@@ -143,6 +143,39 @@ Amazon SageMaker is driven by APIs that are implemented in the language SDKs sup
          * Applied **CI/CD**, After validating model
             * dockerize/containers
             * He just hopes that no one will ask him to do PyTorch and Apache MXNet too.
-      * ## Let's see how Bob could use SageMaker to improve his ML workflows.            
-
-
+      * ## Let's see how Bob could use SageMaker to improve his ML workflows.
+      * Bob could get rid of his bespoke containers and use their built-in counterparts    
+      * Migrating the training workloads to SageMaker
+      * Bob get rid of his training cluster, and let every data scientist train completely on demand instead  
+      * Data Science team would quickly adopt advanced features
+         * distributed training
+         * Pipe mode
+         * Automatic model tuning
+---
+# <span style="color:darkgreen">Setting up Amazon SageMaker on your local machine</span>
+* Install SageMaker Setup in your local machine.
+* Use virtualenv
+## Install SageMaker SDK with virtualenv
+1. Create a new environment named sagemaker, and activate it:
+```
+$ mkdir workdir
+$ cd workdir
+$ python3 -m venv sagemaker
+$ source sagemaker/bin/activate
+```
+2. Install boto3
+```
+pip install boto3 sagemaker pandas
+```
+3. Now, let's quickly check that we can import these SDKs in Python:
+```
+$ python3
+Python 3.7.4 (default, Aug 13 2019, 15:17:50)
+>>> import boto3
+>>> import sagemaker
+>>> print(boto3.__version__)
+1.12.39
+>>> print(sagemaker.__version__)
+1.55.3
+>>> exit
+```
