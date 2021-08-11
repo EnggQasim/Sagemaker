@@ -161,8 +161,18 @@ Amazon SageMaker is driven by APIs that are implemented in the language SDKs sup
 $ mkdir workdir
 $ cd workdir
 $ python3 -m venv sagemaker
+```
+Activate Envornment in Linux
+```
 $ source sagemaker/bin/activate
 ```
+OR
+Activate Envornment in Windows
+```
+$ sagemamer\Scripts\activate
+(sagemaker) D:\Qasim\PIAIC\Quarter4\Practice\Chapter1\Installation>
+```
+
 2. Install boto3
 ```
 pip install boto3 sagemaker pandas
@@ -179,3 +189,100 @@ Python 3.7.4 (default, Aug 13 2019, 15:17:50)
 1.55.3
 >>> exit
 ```
+4. ### let's create a Jupyter kernel based on our virtual environment:
+```
+pip install ipykernel
+python3 -m ipykernel install --user --name=sagemaker
+jupyter notebook
+```
+5. Creat New
+    * Python3
+    * sagemaker (select this instance types)
+6. Finally, we can check that the SDKs are available, by importing them
+7. `deactivate`
+
+## Installing the SageMaker SDK with Anaconda
+1. Create virtual envornment with anaconda
+```
+conda create -y -n conda-sagemaker
+conda activate conda-sagemaker
+```
+2. Install pandas, boto3 and Sagemaker SDKs
+```
+conda install -y boto3 pandas
+pip install sagemaker
+```
+
+3. Now, let's add Jupyter and its dependencies to the environment, and create a new kernel:
+```
+conda install -y jupyter ipykernel
+python3 -m ipykernel install --user --name condasagemaker
+```
+4. Launch jupyter notebook
+```
+jupyter notebook
+```
+5. Now, check and verify
+```
+import boto3
+import sagemaker
+
+print(boto3.__version__)
+print(sagemaker.__version__)
+```
+---
+# A word about AWS permissions
+## Amazon Identity and Access Management (IAM)
+1. Create AWS IAM user [IAM User](https://aws.amazon.com/iam)
+    * If you're not familiar with IAM at all, please read the following documentation:https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html
+2. AWS CLI, eu-west-1 (You can use your nearest region
+```
+$ aws sagemaker list-endpoints --region eu-west-1
+{ 
+    "Endpoints": []
+}
+```
+3. For more information on SageMaker permissions, please refer to the documentation: https://docs.aws.amazon.com/sagemaker/latest/dg/security-iam.html.
+---
+# Setting up an Amazon SageMaker notebook instance
+1. Jupyter notebook have already installed Anaconda, numpy, pandas and so on.
+    * EC2 Intance
+    * GPU and CPU
+    * If you're not familiar with S3 at all, please read the following documentation: https://docs.aws.amazon.com/AmazonS3/latest/dev/Welcome.html
+2. Login with [AWS Console](https://console.aws.amazon.com/sagemaker/)
+    * Select SageMaker Service
+    * Find Notebook instance from left panel.
+        * create new instance sagemaker jupyter notebook
+        * check [sagemaker service prices](https://aws.amazon.com/sagemaker/pricing/)
+        * ml.t2.medium select and configure notebook instance setting.
+        ```
+        #Notebook instance Name
+        first-notebook-instance
+        #Notebook instance type
+        ml.t2.mdeium
+        #Elastic inference 
+        none
+
+
+        ```
+3. Permissions and encryption
+    * IAM role for S3 to create Amazon SageMaker infrastructure and so on.
+    * #### Create an IAM Role
+        * S3 buckets you specify - optional
+        * click on **Create role**
+        * optionally disable root acces to the notebook instance
+    * #### Permission and encryption
+        * Enable - Give users root access to the notebook        
+4. As shown in the following screenshot, the optional Network section lets you pick
+the Amazon **Virtual Private Cloud (VPC)** where the instance will be launched.
+This is useful when you need tight control over network flows from and to the
+instance, for example, to deny it access to the internet. Let's not use this feature here:   
+5. Git Repositories
+6. Tag, It's always good practice to tag AWS resources, as this makes it much easier to
+manage them later on. Let's add a couple of tags.    
+7. Five to ten minutes later, the instance is in service, as shown in the following
+screenshot. Let's click on Open JupyterLab
+<img src="./images/figure1.14.jpg">
+
+
+
