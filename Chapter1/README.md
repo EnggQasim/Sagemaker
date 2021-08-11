@@ -282,7 +282,7 @@ instance, for example, to deny it access to the internet. Let's not use this fea
 manage them later on. Let's add a couple of tags.    
 7. Five to ten minutes later, the instance is in service, as shown in the following
 screenshot. Let's click on Open JupyterLab
-<img src="./images/figure1.14.jpg">
-
-
+<img src="https://github.com/EnggQasim/Sagemaker/blob/main/Chapter1/img/figure1.14.JPG">
+ 
+abc
 
