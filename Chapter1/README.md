@@ -255,16 +255,7 @@ $ aws sagemaker list-endpoints --region eu-west-1
         * create new instance sagemaker jupyter notebook
         * check [sagemaker service prices](https://aws.amazon.com/sagemaker/pricing/)
         * ml.t2.medium select and configure notebook instance setting.
-        ```
-        #Notebook instance Name
-        first-notebook-instance
-        #Notebook instance type
-        ml.t2.mdeium
-        #Elastic inference 
-        none
-
-
-        ```
+        <img src="<img src="https://github.com/EnggQasim/Sagemaker/blob/main/Chapter1/img/figure1.7.JPG">
 3. Permissions and encryption
     * IAM role for S3 to create Amazon SageMaker infrastructure and so on.
     * #### Create an IAM Role
@@ -284,5 +275,5 @@ manage them later on. Let's add a couple of tags.
 screenshot. Let's click on Open JupyterLab
 <img src="https://github.com/EnggQasim/Sagemaker/blob/main/Chapter1/img/figure1.14.JPG">
  
-abc
+
 
