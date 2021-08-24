@@ -273,7 +273,22 @@ instance, for example, to deny it access to the internet. Let's not use this fea
 manage them later on. Let's add a couple of tags.    
 7. Five to ten minutes later, the instance is in service, as shown in the following
 screenshot. Let's click on Open JupyterLab
-<img src="https://github.com/EnggQasim/Sagemaker/blob/main/Chapter1/img/figure1.14.JPG">
- 
+<img src="https://github.com/EnggQasim/Sagemaker/blob/main/Chapter1/img/figure1.14.JPG"\>
+ ----
+# Setting up Amazon SageMaker Studio 
+1. Sagemaker Studio Features
+    * IDE based on Jupyter notebook
+    * SageMaker Experiement to track and compare all jobs
+    * Autopilot to automatically create ML models
+    * A lot of opertions can be achieved in just a few clicks, without having to write any code.
+    * It's provide compute environments that are readily available to run your notebook.
+2. SageMaker Studio On boarding
+    * **Use the quick start procedure:**  easiest for individual account
+    * **Use AWS Single Sign-On (SSO):** If your company has an SSO application set up, this is probably the best option  
+    * **Use Amazon IAM:** If your company doesn't use SSO, this is probably the best option.
 
-
+Note:
+This section requires basic knowledge of Amazon VPC(Virtual Private Cloud) and Amazon IAM. If
+you're not familiar with them at all, please read the following documentation:
+a. https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html
+b. https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html
