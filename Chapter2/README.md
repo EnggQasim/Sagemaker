@@ -49,4 +49,4 @@ Learning | Data Labeling Services | Amazon SageMaker Ground Truth Services**
     * **Private**
         * Sensitive data can be used by some enternally department workers
         * **Creating a private workforce**
-        <img src="<img src="https://github.com/EnggQasim/Sagemaker/blob/main/Chapter2/img/private_workforce.JPG">
+        <img src="https://github.com/EnggQasim/Sagemaker/blob/main/Chapter2/img/private_workforce.JPG">
