@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+src/protobuf_to_dict.py
+src/protobuf3_to_dict.egg-info/PKG-INFO
+src/protobuf3_to_dict.egg-info/SOURCES.txt
+src/protobuf3_to_dict.egg-info/dependency_links.txt
+src/protobuf3_to_dict.egg-info/pbr.json
+src/protobuf3_to_dict.egg-info/requires.txt
+src/protobuf3_to_dict.egg-info/top_level.txt
